@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrial Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.header{
+    background:#1e293b;
+    color:#fff;
+    padding:18px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:250px;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:12px;
+    margin-bottom:8px;
+    background:#1e293b;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sidebar ul li:hover{
+    background:#2563eb;
+}
+
+.main{
+    flex:1;
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#334155;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:bold;
+    color:#2563eb;
+    margin-top:10px;
+}
+
+.section{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+input,select{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+table th{
+    background:#1e293b;
+    color:white;
+}
+
+.status{
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+.active{
+    background:green;
+}
+
+.pending{
+    background:orange;
+}
+
+.completed{
+    background:#2563eb;
+}
+
+@media(max-width:768px){
+
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+
+form{
+    grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+🏭 Industrial Management System
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+<h2>Modules</h2>
+<ul>
+<li>Dashboard</li>
+<li>User Management</li>
+<li>Employee Management</li>
+<li>CRM</li>
+<li>Projects</li>
+<li>Tasks</li>
+<li>Inventory</li>
+<li>Attendance</li>
+<li>Reports</li>
+<li>Settings</li>
+</ul>
+</div>
+
+<div class="main">
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Employees</h3>
+<p>520</p>
+</div>
+
+<div class="card">
+<h3>Projects</h3>
+<p>35</p>
+</div>
+
+<div class="card">
+<h3>Customers</h3>
+<p>1,250</p>
+</div>
+
+<div class="card">
+<h3>Revenue</h3>
+<p>₹45L</p>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Add Employee</h2>
+
+<form>
+<input type="text" placeholder="Employee Name">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Department">
+
+<select>
+<option>Select Role</option>
+<option>Manager</option>
+<option>Developer</option>
+<option>HR</option>
+</select>
+
+<button type="submit">Add Employee</button>
+</form>
+</div>
+
+<div class="section">
+<h2>Project Status</h2>
+
+<table>
+<tr>
+<th>Project</th>
+<th>Manager</th>
+<th>Deadline</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>ERP System</td>
+<td>John</td>
+<td>20-06-2026</td>
+<td><span class="status active">Active</span></td>
+</tr>
+
+<tr>
+<td>CRM Platform</td>
+<td>Sarah</td>
+<td>25-06-2026</td>
+<td><span class="status pending">Pending</span></td>
+</tr>
+
+<tr>
+<td>Analytics Dashboard</td>
+<td>David</td>
+<td>30-06-2026</td>
+<td><span class="status completed">Completed</span></td>
+</tr>
+
+</table>
+</div>
+
+<div class="section">
+<h2>Inventory Overview</h2>
+
+<table>
+<tr>
+<th>Item</th>
+<th>Stock</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Laptops</td>
+<td>150</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Monitors</td>
+<td>75</td>
+<td>Available</td>
+</tr>
+
+<tr>
+<td>Printers</td>
+<td>10</td>
+<td>Low Stock</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

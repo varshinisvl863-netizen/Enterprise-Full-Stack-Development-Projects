@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Analytics Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.header{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#1f2937;
+    margin-bottom:10px;
+}
+
+.value{
+    font-size:28px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+.section{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#1f2937;
+}
+
+.chart{
+    height:250px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-around;
+    gap:15px;
+}
+
+.bar{
+    width:60px;
+    background:#3b82f6;
+    border-radius:6px 6px 0 0;
+}
+
+.bar1{height:120px;}
+.bar2{height:180px;}
+.bar3{height:140px;}
+.bar4{height:220px;}
+.bar5{height:170px;}
+
+.labels{
+    display:flex;
+    justify-content:space-around;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+table th{
+    background:#1f2937;
+    color:white;
+}
+
+@media(max-width:768px){
+    .chart{
+        gap:8px;
+    }
+
+    .bar{
+        width:40px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+📊 Business Analytics Dashboard
+</div>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Revenue</h3>
+            <div class="value">₹12,50,000</div>
+        </div>
+
+        <div class="card">
+            <h3>Total Sales</h3>
+            <div class="value">4,520</div>
+        </div>
+
+        <div class="card">
+            <h3>Customers</h3>
+            <div class="value">1,850</div>
+        </div>
+
+        <div class="card">
+            <h3>Growth Rate</h3>
+            <div class="value">24%</div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Monthly Sales Performance</h2>
+
+        <div class="chart">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+            <div class="bar bar4"></div>
+            <div class="bar bar5"></div>
+        </div>
+
+        <div class="labels">
+            <span>Jan</span>
+            <span>Feb</span>
+            <span>Mar</span>
+            <span>Apr</span>
+            <span>May</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Recent Business Reports</h2>
+
+        <table>
+            <tr>
+                <th>Report</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+
+            <tr>
+                <td>Sales Analysis</td>
+                <td>Marketing</td>
+                <td>Completed</td>
+                <td>10-06-2026</td>
+            </tr>
+
+            <tr>
+                <td>Revenue Report</td>
+                <td>Finance</td>
+                <td>Completed</td>
+                <td>09-06-2026</td>
+            </tr>
+
+            <tr>
+                <td>Customer Insights</td>
+                <td>Support</td>
+                <td>In Progress</td>
+                <td>08-06-2026</td>
+            </tr>
+
+            <tr>
+                <td>Market Trends</td>
+                <td>Research</td>
+                <td>Pending</td>
+                <td>07-06-2026</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

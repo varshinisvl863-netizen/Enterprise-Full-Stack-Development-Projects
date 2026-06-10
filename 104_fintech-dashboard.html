@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinTech Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+}
+
+.header{
+    background:#1e293b;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#334155;
+    margin-bottom:10px;
+}
+
+.amount{
+    font-size:28px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+.section{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section h2{
+    margin-bottom:15px;
+    color:#1e293b;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+    text-align:left;
+}
+
+table th{
+    background:#1e293b;
+    color:white;
+}
+
+.progress{
+    width:100%;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+    height:20px;
+}
+
+.progress-bar{
+    width:75%;
+    height:100%;
+    background:#16a34a;
+}
+
+@media(max-width:768px){
+    table{
+        display:block;
+        overflow-x:auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    💰 FinTech Dashboard
+</div>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Balance</h3>
+            <div class="amount">₹2,45,000</div>
+        </div>
+
+        <div class="card">
+            <h3>Monthly Revenue</h3>
+            <div class="amount">₹85,000</div>
+        </div>
+
+        <div class="card">
+            <h3>Investments</h3>
+            <div class="amount">₹1,20,000</div>
+        </div>
+
+        <div class="card">
+            <h3>Transactions</h3>
+            <div class="amount">1,245</div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Investment Growth</h2>
+
+        <p>Portfolio Performance</p>
+        <br>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+        <br>
+        <p>75% Growth Achieved</p>
+    </div>
+
+    <div class="section">
+        <h2>Recent Transactions</h2>
+
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Amount</th>
+            </tr>
+
+            <tr>
+                <td>10-06-2026</td>
+                <td>Stock Investment</td>
+                <td>Debit</td>
+                <td>₹10,000</td>
+            </tr>
+
+            <tr>
+                <td>09-06-2026</td>
+                <td>Salary Credit</td>
+                <td>Credit</td>
+                <td>₹50,000</td>
+            </tr>
+
+            <tr>
+                <td>08-06-2026</td>
+                <td>Mutual Fund Return</td>
+                <td>Credit</td>
+                <td>₹5,500</td>
+            </tr>
+
+            <tr>
+                <td>07-06-2026</td>
+                <td>Online Purchase</td>
+                <td>Debit</td>
+                <td>₹2,000</td>
+            </tr>
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Architecture Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+.sidebar{
+    width:260px;
+    background:#1e293b;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:12px;
+    margin-bottom:10px;
+    background:#334155;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.sidebar ul li:hover{
+    background:#2563eb;
+}
+
+.main{
+    flex:1;
+    padding:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#334155;
+}
+
+.card p{
+    font-size:28px;
+    color:#2563eb;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.section{
+    background:white;
+    margin-top:25px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.section h2{
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table th,
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+table th{
+    background:#0f172a;
+    color:white;
+}
+
+.status{
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+}
+
+.running{
+    background:green;
+}
+
+.warning{
+    background:orange;
+}
+
+.offline{
+    background:red;
+}
+
+@media(max-width:768px){
+.container{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+🏢 Enterprise Level Architecture
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+<h2>Architecture Modules</h2>
+<ul>
+<li>API Gateway</li>
+<li>Authentication Service</li>
+<li>User Management</li>
+<li>Microservices</li>
+<li>Database Cluster</li>
+<li>Monitoring</li>
+<li>Logging</li>
+<li>Analytics</li>
+<li>Security</li>
+<li>Deployment</li>
+</ul>
+</div>
+
+<div class="main">
+
+<div class="cards">
+
+<div class="card">
+<h3>Services</h3>
+<p>24</p>
+</div>
+
+<div class="card">
+<h3>Active Users</h3>
+<p>12,540</p>
+</div>
+
+<div class="card">
+<h3>API Requests</h3>
+<p>1.2M</p>
+</div>
+
+<div class="card">
+<h3>System Uptime</h3>
+<p>99.99%</p>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Service Monitoring</h2>
+
+<table>
+<tr>
+<th>Service</th>
+<th>Status</th>
+<th>Response Time</th>
+</tr>
+
+<tr>
+<td>API Gateway</td>
+<td><span class="status running">Running</span></td>
+<td>45 ms</td>
+</tr>
+
+<tr>
+<td>Authentication Service</td>
+<td><span class="status running">Running</span></td>
+<td>52 ms</td>
+</tr>
+
+<tr>
+<td>Database Cluster</td>
+<td><span class="status warning">Warning</span></td>
+<td>120 ms</td>
+</tr>
+
+<tr>
+<td>Notification Service</td>
+<td><span class="status offline">Offline</span></td>
+<td>--</td>
+</tr>
+
+</table>
+</div>
+
+<div class="section">
+<h2>Architecture Overview</h2>
+
+<table>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Frontend</td>
+<td>HTML, CSS, JavaScript</td>
+<td>User Interface</td>
+</tr>
+
+<tr>
+<td>Backend</td>
+<td>Node.js, Express</td>
+<td>Business Logic</td>
+</tr>
+
+<tr>
+<td>Database</td>
+<td>MySQL / MongoDB</td>
+<td>Data Storage</td>
+</tr>
+
+<tr>
+<td>Cloud</td>
+<td>AWS / Azure</td>
+<td>Deployment</td>
+</tr>
+
+</table>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
